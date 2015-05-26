@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Garden details > RHS Garden Finder / RHS Gardening</title>
+<meta name="Keywords" content="Flower shows, Royal Horticultural Society, RHS, Gardening for All, Charity" />
+<meta name="Description" content=" A Gardening website - The website of Britain's gardening charity - the Royal Horticultural Society (RHS) - is the gateway to gardening. The RHS is the world's leading horticultural organisation and the UK's leading gardening charity. Our aim is to protect Britain's gardening heritage and help gardeners everywhere" />
+<meta name="Copyright" content="Royal Horticultural Society" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<style type="text/css" media="screen">
+<!--
+@import url(App_Themes/RHSGlobal/Css/global/single.css);
+-->
+</style><style type="text/css" media="screen">
+<!--
+@import url(/css/apps/search.css);
+-->
+</style><!--[if lte IE 8]>
+<style type="text/css" media="screen">
+@import url("App_Themes/RHSGlobal/Css/ie8andlower.css");
+@import url("/css/ie8andlower.css");
+</style>
+<![endif]-->
+<style type="text/css" media="print">
+<!--
+@import url(App_Themes/RHSGlobal/Css/print.css);
+-->
+</style>
+<!--[if lte IE 7]>
+<style type="text/css" media="screen">
+@import url("App_Themes/RHSGlobal/Css/ie7andlower.css");
+</style>
+<![endif]-->
+<!--[if lte IE 6]>
+<style type="text/css" media="screen">
+@import url("App_Themes/RHSGlobal/Css/ie6andlower.css");
+@import url("/css/apps/ie6andlower.css");
+</style>
+<script src="/js/ie6firstchild.js" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?v=3.3&sensor=false">
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var geocoder;
+        var infowindow;
+        geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'address': 'TN23 3BP, United Kingdom', 'region': 'uk' }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var myOptions = {
+                    zoom: 13,
+                    center: results[0].geometry.location,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map
+                });
+
+                infowindow = new google.maps.InfoWindow({
+                    content: InfoWindowContent(results[0].geometry.location),
+                    maxWidth: 320
+                });
+                infowindow.open(map, marker);
+                google.maps.event.addListener(marker, 'click', function() {
+                    if (infowindow) infowindow.close();
+                    infowindow = new google.maps.InfoWindow({ content: InfoWindowContent(results[0].geometry.location) });
+                    infowindow.open(map, marker);
+                });
+            }
+        });
+    }
+
+    function InfoWindowContent(location) {
+        var html = '<div style="width: 240px">';
+        html += '<h3>Godinton House & Gardens</h3>';
+        
+        html += '<ul><li><a href="http://maps.google.co.uk/maps?daddr=Godinton House & Gardens, TN23 3BP, United Kingdom" class="ex-link">Get driving directions</a></li><li><a href="http://www.transportdirect.info/transportdirect/en/journeyplanning/jplandingpage.aspx?id=RHS&do=l&d=' + location.toUrlValue(5) + '&p=0&dn=Godinton+House+%26+Gardens" class="ex-link">Find public transportation</a></li></ul>';
+        
+        
+        html += '</div>';
+        return html;
+    }
+</script>
+</head>
+<body onload="initialize()">
+<p class="skip"><a href="#navmain" accesskey="1" tabindex="1">Skip to site navigation</a></p>
+<a name="top"></a>
+<div class="loginspan"></div>
+<div class="container">
+	<div class="rhslogo"><a href="" title="RHS home"><img src="/images/rhs-logo.png" alt="Royal Horticultural Society" /></a></div>
+	<div class="page clearfix">
+		<div class="masthead clearfix">
+			<div>
+				<form class="search" action="search">
+					<fieldset>
+						<div>
+							<label>Search the RHS website</label>
+							<input type="hidden" value="partner-pub-6402928726328738:mpzwff-w8oa" name="cx" />
+				            <input type="hidden" value="FORID:9" name="cof" />
+				            <input type="hidden" value="UTF-8" name="ie" />
+							<input type="text" class="input_search" id="query_input_head" size="31" name="q" />
+							<input type="submit" name="sa" value="SEARCH" class="input_go" />
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="navmain" id="navmain">
+				<span class="hide">Gardening information, days out &amp; shopping</span>
+				<ul class="navlist">
+					<li ><a href="" class="block1">Home</a></li>
+					<li ><a href="gardening" class="block1">Gardening</a></li>
+					<li ><a href="plants" class="block1">Plants</a></li>
+					<li ><a href="courses" class="block1">Courses</a></li>
+					<li ><a href="children" class="block1">Children</a></li>
+					<li ><a href="http://mygarden.rhs.org.uk/" class="block1">Blogs &amp; forums</a></li>
+					<li  class="selected"><a href="gardens" class="block2">Gardens</a></li>
+					<li ><a href="shows-events" class="block2">Shows &amp; events</a></li>
+					<li ><a href="shopping" class="block3">Shopping</a></li>
+				</ul>
+			</div>
+			<div class="secnav">
+				<span class="hide">Get involved with the RHS</span>
+				<ul>
+				    <li class="become-member"><p class="btn member"><a id="becomeamember" href="join"><strong>Become a member</strong></a></p></li>
+					<li class="members-area"><a id="membersarea" href="https://support.rhs.org.uk/members/login.aspx"><strong>Members&rsquo; area</strong></a></li>
+					<li><a id="aboutus" href="/About-Us">About us</a></li>
+					<li><a id="contactus" href="/About-Us/Contact-us">Contact us</a></li>
+					<li class="noborder"><a id="jobs" href="/About-Us/Jobs">Jobs</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="paper">
+		<div class="span-12 nogutter">
+			<h1>Garden details</h1>
+		</div>
+		<div class="span-12 newbread"> <span><a href="">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			<div><a href="gardens">Gardens</a> &gt; <a href="index.asp">RHS Garden Finder</a> &gt; <a href="gardenfinder2.asp?cboCounty=Kent&amp;Search=Search">Search results</a> &gt; Godinton House & Gardens</div>
+		</div>
+		<!-- LEFT COLUMN  -->
+		<div class="span-2 clear green nogutter" id="lCol">
+						<div class="span-2 subnav">
+				<ul>
+					<li class="section"><a href="Gardens">Gardens</a></li>
+					<li class="subsection"><a href="Gardens/Harlow-Carr">Harlow Carr</a></li>
+					<li class="subsection"><a href="Gardens/Hyde-Hall">Hyde Hall</a></li>
+					<li class="subsection"><a href="Gardens/Rosemoor">Rosemoor</a></li>
+					<li class="subsection"><a href="Gardens/Wisley">Wisley</a></li>
+					<li><a href="index.asp" class="current">RHS Garden Finder</a></li>
+				</ul>
+			</div><div class="span-2 ad">
+    <span><a href="About-Us/Business-opportunities/Advertising">Advertise here</a></span>
+    <div class="center">
+        
+            <!--JavaScript Tag with group ID // Tag for network 1113: Royal Horticultural Society // Website: www.rhs.org.uk // Page: Gardens // Placement: Gardens Left 120 x 90 (2812386) // created at: Jul 29, 2010 4:26:37 PM-->
+            <script language="javascript">
+            <!--
+            if (window.adgroupid == undefined) {
+	            window.adgroupid = Math.round(Math.random() * 1000);
+            }
+            document.write('<scr'+'ipt language="javascript1.1" src="http://adserver.adtech.de/addyn/3.0/1113/2812386/0/5/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+            //-->
+            </script><noscript><a href="http://adserver.adtech.de/adlink/3.0/1113/2812386/0/5/ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://adserver.adtech.de/adserv/3.0/1113/2812386/0/5/ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="120" height="90"></a></noscript>
+            <!-- End of JavaScript Tag -->
+        
+    </div>
+</div>
+<div class="span-2 blue">
+	<h4>Join the RHS</h4>
+	
+	<img src="/images/gardens/rhsgardenfinder/SquareGarden1_L.jpg" width="126" alt="" />
+	<p>Join the RHS to enjoy free garden visits with a guest all year round</p>
+	
+	<p><a href="http://apps.rhs.org.uk/ecommerce/default.aspx">Join now</a><br />
+	<a href="http://apps.rhs.org.uk/ecommerce/giftpackNew.aspx">Buy as a gift</a></p>
+</div>
+		</div>
+		<!-- MAIN CONTENT AREA -->
+		<div class="span-7 green" id="mCol">
+			<div class="span-7">
+				<h2>Godinton House & Gardens&nbsp;<img src="/images/gardens/rhsgardenfinder/icon.gif" alt="Free Access" style="position: relative; top: -2px;" /></h2>
+				<p class="small free">This symbol next to the name of the garden indicates special terms of free entry for RHS Members at specific times of the year, as noted in the RHS Members’ Handbook. Please check with the garden concerned before making a visit.</p>
+				<table class="mcl results onethird">
+					<tbody>
+						
+                        <tr>
+                            <td colspan="2" class="td-map"><div id="map_canvas" style="width:510px; height:287px;"></div></td>
+                        </tr>
+						
+						<tr class="alt2">
+							<td><h4>Address</h4></td>
+							<td><p>
+								Godinton House & Gardens<br />
+								<b>Godinton House</b><br />
+								Godinton Lane<br />Ashford<br />Kent<br />
+								TN23 3BP<br />
+								</p>
+							</td>
+						</tr>
+						
+						<tr class="alt">
+							<td><h4>Telephone</h4></td>			
+							<td><p>01233 643854</p></td>
+						</tr>
+						
+						<tr class="alt2">
+							<td><h4>Website</h4></td>			
+							<td><p><a href="http://www.godinton-house-gardens.co.uk" target="_blank">www.godinton-house-gardens.co.uk</a></p></td>
+						</tr>
+						
+						<tr class="alt">
+							<td><h4>Location</h4></td>			
+							<td>A20 to Charing, then follow brown tourist signs.</td>
+						</tr>
+						
+						<tr class="alt2">
+							<td><h4>Opening Times</h4></td>			
+							<td><p>Garden: 1 March&ndash;1 November; 2 pm&ndash;5.30 pm; daily. House: 29 March&ndash;6 October; 2pm&ndash;5.30pm (last tour 4.30pm); Friday-Sunday &amp; Bank Holidays. Tearooms: 29 March&ndash;6 october; 2pm 0 5.30pm; Friday&ndash;Sunday &amp; Bank Holidays. Please check website for more details.</p></td>
+						</tr>
+						
+						<tr class="alt">
+							<td><h4>Admission</h4></td>			
+							<td><p>Gardens only: Adults £5; Children free. House &amp; Gardens: Adults £8; Children free. RHS members free (Member 1 only). Please check website for more details.</p></td>
+						</tr>
+						
+						<tr class="alt2">
+							<td><h4>Facilities</h4></td>			
+							<td><p><img alt="Parking Available" src="/images/gardens/rhsgardenfinder/parking.gif" />&nbsp;<img alt="Access for the disabled" src="/images/gardens/rhsgardenfinder/disabled.gif" />&nbsp;<img alt="Plants for sale" src="/images/gardens/rhsgardenfinder/plantsales.gif" />&nbsp;<img alt="Lavatories" src="/images/gardens/rhsgardenfinder/loos.gif" /></p></td>
+						</tr>
+						
+						<tr class="alt">
+							<td><h4>Features</h4></td>			
+							<td><p><ul class="listindent"><li>Herbaceous plants</li><li>Daffodils</li><li>Fruit of special interest</li><li>Glasshouses</li><li>Snowdrops</li><li>Good topiary</li><li>Vegetables</li></ul></p></td>
+						</tr>
+						
+						<tr class="alt2">
+							<td><h4>Owner</h4></td>			
+							<td><p>The Godinton House Preservation Trust</p></td>
+						</tr>
+						
+						<tr class="alt">
+							<td><h4>Comment</h4></td>			
+							<td><p><span>G</span>odinton is the prettiest house in Kent, a Jacobean mansion reworked in the 1920s by Sir Reginald Blomfield who advised on the spacious gardens for over 20 years. The charming Italian garden is his: statues, loggia, summerhouse, Persian rill, marble colonnade and Italian cypresses. The magnificent yew hedge dates from his first plantings in the 1900s: Dutch gables have been cut along its top to match the architecture of the house. Elsewhere are a sunken pool fringed with elegant weeping willows, a recently redesigned rose garden, herbaceous borders, sweeping lawns, a stupendous 18th-century park and a topiary garden with a statue of Pan at the centre. The wild garden is a carpet of daffodils and fritillaries in spring. In the kitchen garden are rows of fruit, vegetables and cut-flowers, and a border with rare cultivars planted by members of the Delphinium Society. Every part has recently been restored and is very well maintained, to an unusually high standard.</p></td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<h2>Find another garden</h2>
+				<form action="gardenfinder2.asp" id="form1" method="get" name="form1">
+					<fieldset>
+						<legend>Search for a garden</legend>
+						<label for="garden">Garden name</label>
+						<input name="garden" type="text" maxlength="50" id="garden" class="text fixed7" size="25" value=""/>
+						</label>
+						<label for="cboCounty">County</label>
+						
+	<select name="cboCounty" id="cboCounty" class="selectMenu ninetynine">
+    <option value="null"></option>
+
+		<option value="Aberdeen & Grampian">Aberdeen & Grampian</option>	
+
+		<option value="Aberdeenshire">Aberdeenshire</option>	
+
+		<option value="Argyll">Argyll</option>	
+
+		<option value="Argyll and Bute">Argyll and Bute</option>	
+
+		<option value="Barnet, Herts">Barnet, Herts</option>	
+
+		<option value="Bedfordshire">Bedfordshire</option>	
+
+		<option value="Berkshire">Berkshire</option>	
+
+		<option value="Berwickshire">Berwickshire</option>	
+
+		<option value="Beverley">Beverley</option>	
+
+		<option value="Birmingham">Birmingham</option>	
+
+		<option value="Borders">Borders</option>	
+
+		<option value="Bridgnorth">Bridgnorth</option>	
+
+		<option value="Buckinghamshire">Buckinghamshire</option>	
+
+		<option value="Bute & Loch Lomond">Bute & Loch Lomond</option>	
+
+		<option value="Cambridgeshire">Cambridgeshire</option>	
+
+		<option value="Carmarthenshire">Carmarthenshire</option>	
+
+		<option value="Carmarthenshire & Pembrokeshire">Carmarthenshire & Pembrokeshire</option>	
+
+		<option value="Cheshire">Cheshire</option>	
+
+		<option value="Cheshire & Wirral">Cheshire & Wirral</option>	
+
+		<option value="Clwyd">Clwyd</option>	
+
+		<option value="Co. Antrim">Co. Antrim</option>	
+
+		<option value="Co. Carlow">Co. Carlow</option>	
+
+		<option value="Co. Cork">Co. Cork</option>	
+
+		<option value="Co. Derry">Co. Derry</option>	
+
+		<option value="Co. Donegal">Co. Donegal</option>	
+
+		<option value="Co. Down">Co. Down</option>	
+
+		<option value="Co. Dublin">Co. Dublin</option>	
+
+		<option value="Co. Durham">Co. Durham</option>	
+
+		<option value="Co. Fermanagh">Co. Fermanagh</option>	
+
+		<option value="Co. Kerry">Co. Kerry</option>	
+
+		<option value="Co. Kildare">Co. Kildare</option>	
+
+		<option value="Co. Kilkenny">Co. Kilkenny</option>	
+
+		<option value="Co. Laois">Co. Laois</option>	
+
+		<option value="Co. Limerick">Co. Limerick</option>	
+
+		<option value="Co. Offaly">Co. Offaly</option>	
+
+		<option value="Co. Roscommon">Co. Roscommon</option>	
+
+		<option value="Co. Waterford">Co. Waterford</option>	
+
+		<option value="Co. Westmeath">Co. Westmeath</option>	
+
+		<option value="Co. Wexford">Co. Wexford</option>	
+
+		<option value="Co. Wicklow">Co. Wicklow</option>	
+
+		<option value="Conwy">Conwy</option>	
+
+		<option value="Cornwall">Cornwall</option>	
+
+		<option value="Cumbria">Cumbria</option>	
+
+		<option value="Denbighshire">Denbighshire</option>	
+
+		<option value="Derbyshire">Derbyshire</option>	
+
+		<option value="Devon">Devon</option>	
+
+		<option value="Dorset">Dorset</option>	
+
+		<option value="Dublin">Dublin</option>	
+
+		<option value="Dumfries & Galloway">Dumfries & Galloway</option>	
+
+		<option value="Dyfed">Dyfed</option>	
+
+		<option value="East Devon">East Devon</option>	
+
+		<option value="East Lothian">East Lothian</option>	
+
+		<option value="East Sussex">East Sussex</option>	
+
+		<option value="East Yorkshire">East Yorkshire</option>	
+
+		<option value="Essex">Essex</option>	
+
+		<option value="Fife">Fife</option>	
+
+		<option value="France">France</option>	
+
+		<option value="Glamorgan">Glamorgan</option>	
+
+		<option value="Gloucestershire">Gloucestershire</option>	
+
+		<option value="Grampian">Grampian</option>	
+
+		<option value="Guernsey">Guernsey</option>	
+
+		<option value="Gwent">Gwent</option>	
+
+		<option value="Gwynedd">Gwynedd</option>	
+
+		<option value="Hampshire">Hampshire</option>	
+
+		<option value="Herefordshire">Herefordshire</option>	
+
+		<option value="Hertfordshire">Hertfordshire</option>	
+
+		<option value="Herts">Herts</option>	
+
+		<option value="Highland">Highland</option>	
+
+		<option value="Inverness">Inverness</option>	
+
+		<option value="Isle of Wight">Isle of Wight</option>	
+
+		<option value="Jersey">Jersey</option>	
+
+		<option value="Kent" selected>Kent</option>	
+
+		<option value="Lanarkshire">Lanarkshire</option>	
+
+		<option value="Lancashire">Lancashire</option>	
+
+		<option value="Leicestershire">Leicestershire</option>	
+
+		<option value="Limerick">Limerick</option>	
+
+		<option value="Lincolnshire">Lincolnshire</option>	
+
+		<option value="London">London</option>	
+
+		<option value="Lothian">Lothian</option>	
+
+		<option value="Manchester">Manchester</option>	
+
+		<option value="Merseyside">Merseyside</option>	
+
+		<option value="Monmouthshire">Monmouthshire</option>	
+
+		<option value="Moray & The Black Isle">Moray & The Black Isle</option>	
+
+		<option value="Norfolk">Norfolk</option>	
+
+		<option value="North Devon">North Devon</option>	
+
+		<option value="North Lincolnshire">North Lincolnshire</option>	
+
+		<option value="North Wales">North Wales</option>	
+
+		<option value="North Yorkshire">North Yorkshire</option>	
+
+		<option value="Northamptonshire">Northamptonshire</option>	
+
+		<option value="Northumberland">Northumberland</option>	
+
+		<option value="Nottinghamshire">Nottinghamshire</option>	
+
+		<option value="Oxfordshire">Oxfordshire</option>	
+
+		<option value="Peeblesshire">Peeblesshire</option>	
+
+		<option value="Pembrokeshire">Pembrokeshire</option>	
+
+		<option value="Perthshire">Perthshire</option>	
+
+		<option value="Powys">Powys</option>	
+
+		<option value="Renfrewshire">Renfrewshire</option>	
+
+		<option value="Roxburghshire">Roxburghshire</option>	
+
+		<option value="Rutland">Rutland</option>	
+
+		<option value="Scotland">Scotland</option>	
+
+		<option value="Scottish Borders">Scottish Borders</option>	
+
+		<option value="Shropshire">Shropshire</option>	
+
+		<option value="Somerset">Somerset</option>	
+
+		<option value="South Gloucestershire">South Gloucestershire</option>	
+
+		<option value="South Yorkshire">South Yorkshire</option>	
+
+		<option value="Staffordshire">Staffordshire</option>	
+
+		<option value="Stockport">Stockport</option>	
+
+		<option value="Strathclyde">Strathclyde</option>	
+
+		<option value="Suffolk">Suffolk</option>	
+
+		<option value="Surrey">Surrey</option>	
+
+		<option value="Sussex, East">Sussex, East</option>	
+
+		<option value="Sussex, West">Sussex, West</option>	
+
+		<option value="Tayside">Tayside</option>	
+
+		<option value="Tyne & Wear">Tyne & Wear</option>	
+
+		<option value="Warwickshire">Warwickshire</option>	
+
+		<option value="West Midlands">West Midlands</option>	
+
+		<option value="West Sussex">West Sussex</option>	
+
+		<option value="West Yorkshire">West Yorkshire</option>	
+
+		<option value="Wiltshire">Wiltshire</option>	
+
+		<option value="Worcestershire">Worcestershire</option>	
+
+		<option value="Yorkshire">Yorkshire</option>	
+
+	</select>
+
+                        
+						<h3>Additional criteria</h3>
+						<div class="checkbox">
+							<input id="chkParking" type="checkbox" name="chkParking" />
+							<label for="chkParking">Parking</label>
+							<input id="chkPlantsman" type="checkbox" name="chkPlantsman" />
+							<label for="chkPlantsman">Plantsman</label>
+							<input id="chkPlantSales" type="checkbox" name="chkPlantSales" />
+							<label for="chkPlantSales">Plant Sales</label>
+							<input id="chkDisabled" type="checkbox" name="chkDisabled" />
+							<label for="chkDisabled">Disabled facilities</label>
+							<input id="chkFree" type="checkbox" name="chkFree" />
+							<label for="chkFree">Free access for RHS Members</label>
+						</div>
+						<label>&nbsp;</label>
+						<input type="submit" name="Search" value="Search" id="Search" class="formbtn" />
+						<input type="reset" value="Reset" name="Reset" onclick="ResetControls(this.form)" class="formbtn reset">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<!-- RIGHT COLUMN  -->
+				<div class="span-3 brown last" id="rCol">
+			<div class="span-3 last">
+				<h3>National Gardens Scheme</h3>
+				<img src="../../images/gardens/rhsgardenfinder/ngslogo.gif" width="198" height="58" />
+				<p>The National Gardens Scheme Garden Finder contains details of the thousands of gardens that open for charity.</p>
+				<p><a href="http://www.ngs.org.uk" target="_blank">Find out more about the NGS and its open garden scheme</a></p>
+			</div>
+			<div class="span-3 ad last">
+		        <span><a href="About-Us/Business-opportunities/Advertising">Advertise here</a></span>
+		        <div class="center">
+		        <!--JavaScript Tag with group ID // Tag for network 1113: Royal Horticultural Society // Website: www.rhs.org.uk // Page: Plants // Placement: Plants Right 120 x 600 (2812401) // created at: Jul 29, 2010 4:26:37 PM-->
+                <script language="javascript">
+                <!--
+                if (window.adgroupid == undefined) {
+	                window.adgroupid = Math.round(Math.random() * 1000);
+                }
+                document.write('<scr'+'ipt language="javascript1.1" src="http://adserver.adtech.de/addyn/3.0/1113/2812401/0/168/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+                //-->
+                </script><noscript><a href="http://adserver.adtech.de/adlink/3.0/1113/2812401/0/168/ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://adserver.adtech.de/adserv/3.0/1113/2812401/0/168/ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="120" height="600"></a></noscript>
+                <!-- End of JavaScript Tag -->
+                </div>
+		    </div>
+		</div>
+	</div>
+		<div class="footer">
+			<div class="span-12 skiptotop"><a href="#top">Skip to top</a></div>
+			<div class="sharebar">
+				<div id="share-page">
+    <h4>Share this page</h4>
+    <div class="share-googleplus">
+        <!-- Place this tag where you want the +1 button to render -->
+        <g:plusone annotation="none" callback="plusone_vote"></g:plusone>
+        <!-- Place this render call where appropriate -->
+        <script type="text/javascript">
+            window.___gcfg = {lang: 'en-GB'};
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+            function plusone_vote( obj ) {
+                _gaq.push(['_trackEvent','plusone',obj.state]);
+            }
+        </script>
+    </div>
+    <div class="share-twitter">
+        <script src="//platform.twitter.com/widgets.js"></script>
+        <div>
+            <a class="twitter-share-button" data-via="The_RHS" data-count="horizontal" href="https://twitter.com/share">Tweet</a>
+        </div>
+        <script>
+            twttr.events.bind('tweet', function(event) {
+                if (event) {
+                    _gaq.push(['_trackSocial', 'twitter', 'tweet']);
+                }
+            });
+        </script>
+    </div>
+    <div class="share-facebook">
+        <iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+        <script>
+            FB.Event.subscribe('edge.create', function(targetUrl) {
+                _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+            });
+            FB.Event.subscribe('edge.remove', function(targetUrl) {
+                _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+            });
+        </script>
+    </div>
+</div>
+			</div>
+			<div>
+				<form class="search" action="search">
+					<fieldset>
+						<div>
+							<label>Search the RHS website</label>
+							<input type="hidden" value="partner-pub-6402928726328738:mpzwff-w8oa" name="cx" />
+				            <input type="hidden" value="FORID:9" name="cof" />
+				            <input type="hidden" value="UTF-8" name="ie" />
+							<input type="text" class="input_search" id="query_input_head" size="31" name="q" />
+							<input type="submit" name="sa" value="SEARCH" class="input_go" />
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="footnav">
+				<h2 class="hide">For the media</h2>
+				<ul>
+					<li><a href="About-Us/Business-opportunities/Advertising">Advertise with us</a></li>
+					<li><a href="http://press.rhs.org.uk/">Press</a></li>
+					<li class="noborder"><a href="Legal">Disclaimer</a></li>
+				</ul>
+			</div>
+			<h2>Explore the RHS</h2>
+		</div>
+		<div class="fat-footer clearfix">
+			<div>
+				<h3><a href="gardening">Gardening</a></h3>
+				<ul>
+					<li><a href="Gardening/Grow-Your-Own">Grow your own</a></li>
+					<li><a href="Gardening/calendar">Gardeners&rsquo; calendar</a></li>
+					<li><a href="Gardening/Community-gardening">Community gardening</a></li>
+					<li><a href="Gardening/Sustainable-gardening">Sustainable gardening</a></li>
+					<li><a href="gardening" class="more">[ More in gardening ]</a></li>
+				</ul>
+				<h3><a href="science">Science</a></h3>
+				<ul>
+					<li><a href="Plants/Plant-science/National-Plant-Collections-at-the-RHS">National Plant Collections at the RHS</a></li>
+					<li><a href="Plants/Plant-science/Plant-registration">Plant registration</a></li>
+					<li><a href="Plants/Plant-science/RHS-Herbarium">RHS Herbarium</a></li>
+					<li><a href="http://apps.rhs.org.uk/horticulturaldatabase/">RHS Horticultural Database</a></li>
+					<li><a href="science" class="more">[ More science ]</a></li>
+				</ul>
+				<h3><a href="http://press.rhs.org.uk">Press</a></h3>
+				<ul>
+					<li><a href="http://press.rhs.org.uk">Media Centre</a></li>
+				</ul>				
+			</div>
+			<div>
+				<h3><a href="plants">Plants</a></h3>
+				<ul>
+					<li><a href="http://apps.rhs.org.uk/rhsplantfinder/">RHS Plant Finder</a></li>
+					<li><a href="http://apps.rhs.org.uk/plantselector/">RHS Plant Selector</a></li>
+					<li><a href="Plants/RHS-Publications">RHS Publications</a></li>
+					<li><a href="Plants/Featured-Plants">Featured plants</a></li>
+					<li><a href="Plants/Plant-trials-and-awards">Plant trials &amp; awards</a></li>
+					<li><a href="plants" class="more">[ More in plants ]</a></li>
+				</ul>
+				<h3><a href="gardens">Gardens</a></h3>
+				<ul>
+					<li><a href="Gardens/Harlow-Carr">Harlow Carr</a></li>
+					<li><a href="Gardens/Hyde-Hall">Hyde Hall</a></li>
+					<li><a href="Gardens/Rosemoor">Rosemoor</a></li>
+					<li><a href="Gardens/Wisley">Wisley</a></li>
+					<li><a href="Gardens/RHS-Recommended-Gardens">Recommended gardens</a></li>
+					<li><a href="http://apps.rhs.org.uk/rhsgardenfinder/">Find a garden</a></li>
+					<li><a href="gardens" class="more">[ More gardens ]</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3><a href="courses">Courses</a></h3>
+				<ul>
+					<li><a href="Courses/Qualifications">Qualifications</a></li>
+					<li><a href="Courses/Leisure-learning">Leisure learning</a></li>
+					<li><a href="Courses/Horticultural-training">Horticultural training</a></li>
+					<li><a href="Courses/Bursaries">Bursaries</a></li>
+					<li><a href="Courses/Careers">Careers</a></li>
+					<li><a href="Courses/Internships">Voluntary internships</a></li>
+					<li><a href="courses" class="more">[ More courses ]</a></li>
+				</ul>
+				<h3><a href="shows-events">Shows &amp; events</a></h3>
+				<ul>
+					<li><a href="Shows-Events/RHS-Chelsea-Flower-Show">RHS Chelsea Flower Show</a></li>
+					<li><a href="Shows-Events/Hampton-Court-Palace-Flower-Show">Hampton Court Palace Flower Show</a></li>
+					<li><a href="Shows-Events/RHS-Show-Tatton-Park">RHS Show Tatton Park</a></li>
+					<li><a href="Shows-Events/RHS-Show-Cardiff">RHS Show Cardiff</a></li>
+					<li><a href="http://apps.rhs.org.uk/RHSEventFinder/Search.aspx">Find an event</a></li>
+					<li><a href="shows-events" class="more">[ More shows &amp; events ]</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3><a href="children">Children</a></h3>
+				<ul>
+					<li><a href="Children/For-families">For families</a></li>
+					<li><a href="Children/For-kids">For kids</a></li>
+					<li><a href="Children/For-schools">For schools</a></li>
+					<li><a href="http://apps.rhs.org.uk/schoolgardening/default.aspa">Campaign for School Gardening</a></li>
+					<li><a href="children" class="more">[ More for children ]</a></li>
+				</ul>
+				<h3><a href="about-us">About us</a></h3>
+				<ul>
+					<li><a href="About-Us/Who-we-are">Who we are</a></li>
+					<li><a href="About-Us/What-We-Do">What we do</a></li>
+					<li><a href="About-Us/Support-our-work">Support our work</a></li>
+					<li><a href="About-Us/Jobs">Jobs</a></li>
+					<li><a href="About-Us/RHS-Lindley-Library">RHS Lindley Library</a></li>
+					<li><a href="About-Us/Contact-us">Contact us</a></li>
+					<li><a href="About-Us/Feedback">Feedback &amp; complaints</a></li>
+					<li><a href="about-us" class="more">[ More about us ]</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3><a href="advice">Advice</a></h3>
+				<ul>
+					<li><a href="http://apps.rhs.org.uk/advicesearch/">Advice search</a></li>
+					<li><a href="Gardening/Help-advice/RHS-Advisory-Service">RHS Advisory Service</a></li>
+					<li><a href="Gardening/Help-advice/Videos">Videos</a></li>
+					<li><a href="Gardening/Help-advice/Garden-design">Garden design</a></li>
+					<li><a href="advice" class="more">[ More advice ]</a></li>
+				</ul>
+				<h3><a href="join">Membership</a></h3>
+				<ul>
+					<li><a href="join">Join the RHS</a></li>
+					<li><a href="https://support.rhs.org.uk/members/login.aspx">Manage my membership</a></li>
+					<li><a href="join" class="more">[ More in membership ]</a></li>
+				</ul>
+				<h3><a href="shopping">Shopping</a></h3>
+				<ul>
+					<li><a href="http://www.rhsplants.co.uk/">RHS Plants</a></li>
+					<li><a href="http://shop.wisley.co.uk/homepage.php">RHS Books &amp; gifts</a></li>
+					<li><a href="http://www.rhsprints.co.uk/index.php">RHS Prints</a></li>
+					<li><a href="shopping" class="more">[ More shopping ]</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="foot-ad">
+			<script type="text/javascript"><!--
+			    google_ad_client = "ca-pub-6402928726328738";
+			    /* Footer */
+			    google_ad_slot = "6140377693";
+			    google_ad_width = 728;
+			    google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+			<p class="copyright">&copy; The Royal Horticultural Society 2011 / <a href="About-Us/Who-we-are/Governance-and-decision-making/Charitable-purpose">RHS Registered Charity &#8470; 222879/SC038262</a></p>
+		</div>
+		
+		<!-- Google tagging -->
+		<script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+
+		
+</div>
+</body>
+</html>
